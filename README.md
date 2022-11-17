@@ -12,4 +12,4 @@
 
 6. User can also upload new posts and see other user's posts.
 
-URL: https://linkedin-clone-2bbc7.web.app/
+https://linkedin-clone-2bbc7.web.app/
