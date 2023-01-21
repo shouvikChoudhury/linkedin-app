@@ -25,7 +25,8 @@ export default function Feed() {
             description: 'Frontend Developer',
             message: input,
             photoURL: user.photoURL,
-            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+
         })
         setInput("")
     }
@@ -37,6 +38,7 @@ export default function Feed() {
                 data: doc.data()
             })))
         })
+        console.log(post.id)
     }, [])
 
     return (
