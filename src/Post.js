@@ -50,11 +50,11 @@ export default forwardRef(function Post({ name, description, message, photoURL }
                 <div className='post__footer'>
                     <div className="post__footer__options" onClick={likeHandler}>
                         <ThumbUpAltIcon />
-                        <span>{likes > 0 ? likes : ""}Like</span>
+                        <span>{likes > 0 ? likes : ""} Like</span>
                     </div>
                     <div className="post__footer__options" onClick={cometHandler}>
                         <CommentIcon />
-                        <span>Comment</span>
+                        <span>Comment {arrr.length > 0 ? `(${arrr.length})` : ""}</span>
                     </div>
                     <div className="post__footer__options">
                         <ShareIcon />
