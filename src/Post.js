@@ -71,7 +71,7 @@ export default forwardRef(function Post({ name, description, message, photoURL }
                     })}
                 </div>
                 {comets && <form onSubmit={submitComet}>
-                    <input type="text" placeholder='Start a comment' value={first} onChange={e => setfirst(e.target.value)} />
+                    <input autoFocus type="text" placeholder='Start a comment' value={first} onChange={e => setfirst(e.target.value)} />
                     <input type="submit" />
                 </form>}
 
