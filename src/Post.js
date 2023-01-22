@@ -6,12 +6,15 @@ import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 import SendIcon from '@mui/icons-material/Send';
+import { useSelector } from 'react-redux';
+import { selectuser } from './features/userSlice';
 
 export default forwardRef(function Post({ name, description, message, photoURL }, ref) {
     const [likes, setlikes] = useState(0)
     const [comets, setcomets] = useState(false)
     const [first, setfirst] = useState("")
     const [arrr, setarrr] = useState([])
+    const user = useSelector(selectuser)
 
     const likeHandler = (e) => {
         setlikes(likes + 1)
@@ -67,7 +70,7 @@ export default forwardRef(function Post({ name, description, message, photoURL }
                 </div>
                 <div>
                     {arrr.map((item, index) => {
-                        return (<div key={index}><h5>{item}</h5></div>)
+                        return (<div key={index}><i><b>{user.displayName}</b>: {item}</i></div>)
                     })}
                 </div>
                 {comets && <form onSubmit={submitComet}>
